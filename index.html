@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Snake Game</title>
+	<link rel="icon" href="img/logo.jpg" class="logo">
+</head>
+
+<style type="text/css">
+
+	.logo{
+		border-radius: 45px;
+	}
+	
+	body {
+		background: url("img/background.png");
+		background-size: 70px;
+	}
+	.play {
+		background: skyblue;
+		border-radius: 	10px;
+		border:5px solid white;
+		margin: 30px;
+
+			        -webkit-animation: action 1s infinite  alternate;
+	        animation: action 1s infinite  alternate;
+	    }
+	    @-webkit-keyframes action {
+	        0% { transform: translateY(0); }
+	        100% { transform: translateY(-10px); }
+	    }
+	    @keyframes action {
+	        0% { transform: translateY(0); }
+	        100% { transform: translateY(-10px); }
+		}
+
+		@keyframes MoveUpDown {
+		  0%, 100% {
+		    transform: translateY(0);
+		  }
+		  50% {
+		    transform: translateY(-100px);
+		  }
+	}
+	h2 {
+		margin: 12px 6px 0 0;
+		color: white;
+	}
+	.start {
+		transition: transform .2s;
+		height: 64px;
+		width: 250px;
+		background: #15c;
+		border-radius: 8px;
+		text-decoration: none;
+		color: white;
+		margin: 30px;
+		border: none;
+	}
+	.start:hover{
+		cursor: pointer;
+		transform: scale(1.5);
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+
+</style>
+
+<body>
+
+	<center>
+		<img src="img/play.png" class="play">
+		<br/>
+		<button class="start"><h2 class="text" onclick="playPause()">Jouer</h2></button>
+		<br/>
+		<video id="video1" width="1px">
+			<source src="img/rickroll.mp4" >
+		</video>
+
+	</center>
+
+
+</body>
+
+<script type="text/javascript">
+	
+	var myVideo = document.getElementById("video1");
+
+	function playPause() {
+		myVideo.play(); 
+		myVideo.width = 840;
+		window.scroll(0,500);
+	}
+
+</script>
+
+</html>
